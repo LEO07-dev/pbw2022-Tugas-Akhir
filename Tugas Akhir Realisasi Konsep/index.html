@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Azmi Jalaluddin Amron">
+    <meta name="keyword" content="HTMl, CSS, Javascript">
+    <title>Aam Store</title>
+    <link rel="icon" sizes="32x32" href="assets/Images/icon-aamstore.png">
+    <link rel="stylesheet" type="text/CSS" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <!-- Header -->
+    <header name="kepala">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <h4 class="name"><font size="5">TOKO BUNGA AAM</font></h4>
+        <!-- search -->
+          <div class="search-box" style="padding-right: 0px;">
+            <input type="text" placeholder="Mau cari apa?">
+            <div class="search-icon">
+              <i class="fas fa-search"></i>
+            </div>
+      <div class="cancel-icon">
+              <i class="fas fa-times"></i>
+            </div>
+      <div class="search-data">
+      </div>
+      </div>
+        <h4 class="login">
+          <a href="login.html" style="text-decoration: none;">LOGIN</a>
+        </h4>
+      </nav>
+      <!-- Navbar end -->
+
+      <!-- Greetings -->
+      <h1 class="judul">
+        <font size="7" color="#0000ff"><b>WELCOME TO MY SHOP</b></font>
+      </h1>
+      <!-- Greetins end -->
+    </header>
+    <!-- Header end -->
+
+    <!-- Article -->
+    <article id="jual">
+      <div id="barang">
+        <a href="kembang_sepatu.html" style="text-decoration: none;">
+          <div class="bunga1">
+            <img src="assets/Images/Kembang-Sepatu.jpg" alt="Kembang Sepatu">
+            <h4>Kembang Sepatu</h4>
+            <p><span style="color: #dc143c">Beli</span> Rp 40.000,00</p>
+          </div>
+        </a>
+        <a href="bunga_anggrek.html" style="text-decoration: none;">
+          <div class="bunga2">
+            <img src="assets/Images/Bunga-Anggrek.jpg" alt="Bunga Anggrek">
+            <h4>Bunga Anggrek</h4>
+            <p><span style="color: #dc143c">Beli</span> Rp 400.000,00</p>
+          </div>
+        </a>
+        <a href="lidah_buaya.html" style="text-decoration: none;">
+          <div class="bunga3">
+            <img src="assets/Images/Lidah-Buaya.jpg" alt="Lidah Buaya">
+            <h4>Lidah Buaya</h4>
+            <p><span class="tekanBeli" style="color: #dc143c">Beli</span> Rp 120.000,00</p>
+          </div>
+        </a>
+      </div>
+    </article>
+    <!-- Article end -->
+
+    <!-- Footer -->
+    <footer>
+      <p id="thankyou">
+        <font size="28">Terimakasih telah mengunjungi web kami</font>
+      </p>
+      <p id="copy"><font size="20">&copy;Copyright 2022</font></p>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Javascript start -->
+    <script>
+      const searchBox = document.querySelector(".search-box");
+      const searchBtn = document.querySelector(".search-icon");
+      const cancelBtn = document.querySelector(".cancel-icon");
+      const searchInput = document.querySelector("input");
+      const searchData = document.querySelector(".search-data");
+      searchBtn.onclick =()=>{
+        searchBox.classList.add("active");
+        searchBtn.classList.add("active");
+        searchInput.classList.add("active");
+        cancelBtn.classList.add("active");
+        searchInput.focus();
+        if(searchInput.value != ""){
+          var values = searchInput.value;
+          searchData.classList.remove("active");
+          searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+        }else{
+          searchData.textContent = "";
+        }
+      }
+      cancelBtn.onclick =()=>{
+        searchBox.classList.remove("active");
+        searchBtn.classList.remove("active");
+        searchInput.classList.remove("active");
+        cancelBtn.classList.remove("active");
+        searchData.classList.toggle("active");
+        searchInput.value = "";
+      }
+    </script>
+    <!-- Javascript end -->
+  </body>
+</html>

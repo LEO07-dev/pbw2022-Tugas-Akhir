@@ -1,0 +1,48 @@
+/* Background image */
+article{
+    background-image: url(/assets/Images/Pohon-Sakura.jpg);
+    width: 800px;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px 0px 0px 200px;
+    padding: 30px 30px 30px 30px;
+}
+
+/* Kotak pojok kanan atas */
+#kotak{
+    float: right;
+    background-color: rgba(0, 0, 255, 0.2);
+    backface-visibility: visible;
+    width: max-content;
+    border-radius: 50% 50% 50% 50%;
+}
+
+/* Menu pembayaran */
+.pilihan{
+    position: relative;
+    margin-left: 125px;
+    left: 20%;
+    border: 1px;
+    background-color: #FFF;
+    width: 300px;
+    height: 50px;
+    border: 1px solid white;
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+}
+
+.pilihan1{
+    position: relative;
+    margin-left: 125px;
+    left: 20%;
+    border: 1px;
+    background-color: #FFF;
+    width: 300px;
+    height: 50px;
+    padding-bottom: 25px;
+    border: 1px solid white;
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+}

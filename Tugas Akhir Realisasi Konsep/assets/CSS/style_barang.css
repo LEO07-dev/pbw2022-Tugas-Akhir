@@ -1,0 +1,82 @@
+/* Header */
+#Judul{
+    font-size: 21pt; 
+    text-align: center; 
+    vertical-align: super;
+}
+
+.Paragraph{
+    text-indent: 70px; 
+    text-align: justify;
+}
+
+/* Article */
+.buy{
+    background-color: #2ECC71; 
+    border: #2ECC71; 
+    font-size: 24px;
+    padding: 3px 40px;
+}
+
+.cancel{
+    background-color: chartreuse; 
+    border: #7fff00; 
+    font-size: 24px;
+    padding: 3px 40px;
+}
+
+
+.backHome{
+    float: right;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.panah{
+    height:0px;
+    width:0px;
+    border-right:solid 120px #3498DB;
+    border-top:solid 80px transparent;
+    border-bottom:solid 80px transparent;
+    margin-left: 100px;
+}
+
+.kotak{
+    background: #3498DB;
+    width: 220px;
+    height: 79px;
+    margin-top: 40px;
+}
+
+.back{
+    color: #F1C40F;
+    font-size: 40pt;
+    vertical-align: super;
+    margin-top: 8px;
+}
+
+/* Hover */
+article .tombol a .backHome .kotak p:hover{
+    color: #FF0000;
+    transform:
+}
+
+article .tombol a .backHome .kotak:hover{
+    background: #7fff00;
+    transition: width 2s;
+    width: 300px;
+}
+
+article .tombol .buy:hover{
+    box-shadow: 3px 3px 8px #7fff00;
+    transition: margin-left 2s;
+    margin-left: 20px;
+    transition: transform 4s;
+    transform: scale(1.2);
+}
+
+article .tombol .cancel:hover{
+    box-shadow: 3px 3px 8px #7fff00;
+    transition: transform 2s;
+    transform: scale(1.2);
+}

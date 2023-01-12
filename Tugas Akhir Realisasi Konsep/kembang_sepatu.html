@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Azmi Jalaluddin Amron">
+    <meta name="keyword" content="HTMl, CSS">
+    <title>Kembang Sepatu</title>
+    <link rel="icon" sizes="32x32" href="assets/Images/icon-aamstore.png">
+    <link rel="stylesheet" type="text/css" href="assets/CSS/style_barang.css">
+</head>
+<body>
+    <header>
+        <table>
+            <tr>
+                <td>
+                    <a href="assets/Images/Kembang-Sepatu.jpg" target="_blank">
+                        <img src="assets/Images/Kembang-Sepatu.jpg" alt="Kembang-Sepatu" width="250px" height="180px">
+                    </a>
+                </td>
+                <td>
+                    <p id="Judul" name="judul"><u>Kembang Sepatu</u></p>
+                    <p class="Paragraph" name="paragraf">              
+                        Kembang sepatu banyak dijadikan tanaman hias karena bunganya yang cantik. Bunga digunakan untuk menyemir sepatu di India dan sebagai bunga persembahan. Di Tiongkok, bunga yang berwarna merah digunakan sebagai bahan pewarna makanan. Di Indonesia, daun dan bunga digunakan dalam berbagai pengobatan tradisional. Kembang sepatu yang dikeringkan juga diminum sebagai teh.
+                        Di Okinawa, Jepang digunakan sebagai tanaman pagar. Di bagian selatan Okinawa, tanaman ini disebut Gushōnu hana (bunga kehidupan sesudah mati) sehingga banyak ditanam di makam.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <article>
+        <table style="padding-top: 7%;">
+            <tr>
+                <td>
+                    <p style="font-size: 28pt;">Jumlah Pesanan : </p>
+                </td>
+                <td>
+                    <p id="paying" style="font-size: 28pt;"></p>
+                </td>
+            </tr>
+        </table>
+        <div class="tombol">
+            <button class="buy" name="submit" onclick="addD()" value="Tambah"><font color="#FF0000">Tambah</font></button>
+            <button class="cancel" name="submit" onclick="delD()" value="Kurang"><font color="Red">Kurang</font></button>
+            <p><a href="payment.html" style="text-decoration: none;">Bayar</a></p>
+            <a href="index.html">
+                <div class="backHome">
+                    <div class="panah"></div>
+                    <div class="kotak">
+                        <p class="back">Kembali</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </article>
+    <!-- Javascript start -->
+    <script>
+        let html = document.getElementById("paying").innerHTML;
+        document.getElementById("paying").innerHTML = 0;
+        function addD() {
+            html += 1;
+            document.getElementById("paying").innerHTML = html;
+        }
+        function delD() {
+            html -= 1;
+            document.getElementById("paying").innerHTML = html;
+        }
+    </script>
+    <!-- Javascript end -->
+</body>
+</html>
